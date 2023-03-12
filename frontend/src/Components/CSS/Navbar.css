@@ -1,0 +1,47 @@
+.navbar{
+    background-color: #399ad5;
+}
+.brand img{
+    height: 40px;
+    background-color: white;
+    padding: 0px 10px;
+    border-radius: 25px;
+}
+.brand img:hover{
+    transform: scale(1.05);
+    background-color: white;
+}
+
+#NavbarLinks{
+    display: flex;
+    gap: 10px;
+}
+
+#NavbarLinks a{
+    text-decoration: none;
+}
+.brand, .list_item{
+    color: #fff !important;
+    font-size: 18px;
+    padding: 2px 18px;
+}
+.list_item:hover{
+    background-color: tomato !important;
+    border-radius: 25px;
+}
+.btn{
+    background-color: tomato !important;
+    border: none;
+    border-radius: 20px;
+}
+.btn:hover{
+    transform: scale(1.05);
+    background-color: rgb(249, 79, 50) !important;
+}
+
+button.navbar-toggler.collapsed{
+    background-color: white !important;
+}
+button.navbar-toggler{
+    background-color: #fff !important;
+}

@@ -1,0 +1,27 @@
+#whatsapp_float{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}
+
+#whatsapp_div{
+    border: none;
+    border-radius: 25px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0px 10px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+#whatsapp_div p{
+text-align: center;
+font-size: 15px;
+margin-top: 15px;
+color: tomato;
+font-weight: bold;
+}
