@@ -1,6 +1,6 @@
 #whatsapp_float{
     position: fixed;
-    bottom: 50px;
+    bottom: 20px;
     right: 20px;
 }
 
@@ -15,13 +15,22 @@
     padding: 0px 10px;
     text-align: center;
     background-color: transparent;
-    border: 1px solid black;
+    /* border: 2px solid black; */
+    animation: bouncy 1s linear infinite;
+    animation-delay: 1s;
 }
+
 
 #whatsapp_div p{
 text-align: center;
 font-size: 15px;
 margin-top: 15px;
-color: tomato;
+color: #312293;
 font-weight: bold;
+}
+
+@keyframes bouncy{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-30px);}
+    100%{transform: translateY(0);}
 }

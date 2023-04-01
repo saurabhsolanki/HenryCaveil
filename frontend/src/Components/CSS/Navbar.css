@@ -1,5 +1,7 @@
 .navbar{
-    background-color: #399ad5;
+    /* background-color: #3f309a; */
+    background-color: #fbffe3;
+    /* background-color: #7addf1; */
 }
 .brand img{
     height: 40px;
@@ -17,26 +19,32 @@
     gap: 10px;
 }
 
-#NavbarLinks a{
-    text-decoration: none;
+#NavbarLinks .dropdown{
+    background-color: #fbffe3;
+    color: black;
+    border-radius: 15px;
 }
-.brand, .list_item{
-    color: #fff !important;
-    font-size: 18px;
-    padding: 2px 18px;
+
+#NavbarLinks .btn{
+    color: black;
+}
+.list_item{
+    color: black !important;
+    text-decoration: none;
+    font-weight: 500;
 }
 .list_item:hover{
-    background-color: tomato !important;
-    border-radius: 25px;
+    color: #3f309a !important;
 }
 .btn{
-    background-color: tomato !important;
+    background-color: #3f309a !important;
     border: none;
-    border-radius: 20px;
+    border-radius:10 20px;
+    padding: 5px 20px;
 }
 .btn:hover{
     transform: scale(1.05);
-    background-color: rgb(249, 79, 50) !important;
+    background-color: #312293 !important;
 }
 
 button.navbar-toggler.collapsed{

@@ -1,0 +1,74 @@
+
+#mainAboutPageHeaderDiv{
+    background-image: url("https://rstheme.com/products/wordpress/ecenter/wp-content/uploads/2022/12/breadcrumb-inner-bg-img.png");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f0edfe;
+}
+
+#aboutPageHeaderDiv{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items:center;
+    padding: 70px 60px;
+    justify-content:center;
+    width: 90%;
+    margin: auto;
+}
+
+.aboutPageHeaderDivContent>h1{
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+    animation-name: moveUp;
+    animation-duration: 0.4s;
+}
+
+
+.aboutPageHeaderDivContent img{
+    width: 40%;
+    border-radius: 5px;
+    margin-left: 400px;
+    animation-name: moveUp;
+    animation-duration: 0.9s;
+}
+
+
+@media screen and (max-width: 800px) {
+    #aboutPageHeaderDiv{
+        width: 80%;
+        margin: auto;
+    }
+
+    .aboutPageHeaderDivContent>h1{
+        font-size: 35px;
+    }
+
+    .aboutPageHeaderDivContent img{
+        width: 50%;
+        border-radius: 5px;
+        margin-left: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #aboutPageHeaderDiv{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .aboutPageHeaderDivContent>h1{
+        font-size: 25px;
+    }
+
+    .aboutPageHeaderDivContent img{
+        width: 60%;
+        border-radius: 5px;
+        margin-left: 0px;
+    }
+}

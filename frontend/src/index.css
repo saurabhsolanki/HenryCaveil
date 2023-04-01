@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Sora:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Sora:wght@300;500&display=swap');
+
+*{
+  font-family: 'Sora', sans-serif;
+}

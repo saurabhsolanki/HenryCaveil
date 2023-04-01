@@ -1,0 +1,90 @@
+#whyandreason{
+  padding: 60px 200px;
+  background-color: #f4f4f4;
+}
+
+#reasonDiv{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+#reasonDiv div{
+  background-color: white;
+  text-align: left;
+  border-radius: 15px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateZ(0);
+  animation-name: moveUp;
+  animation-duration: 1s;
+}
+
+#reasonDiv div i{
+  color: #4f2d7f;
+  font-size: 40px;
+}
+#reasonDiv div p{
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/*  */
+/* media query */
+@media screen and (max-width: 980px) {
+    #whyandreason{
+        padding: 30px 50px;
+      }
+      
+  #reasonDiv {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  #reasonDiv div i {
+    color: #4f2d7f;
+    font-size: 30px;
+  }
+  #reasonDiv div p {
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    #whyandreason{
+        padding: 10px 50px;
+      }
+      
+  #reasonDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  #reasonDiv div i {
+    color: #4f2d7f;
+    font-size: 20px;
+  }
+  #reasonDiv div p {
+    text-align: left;
+    font-weight: 600;
+    font-size: 10px;
+  }
+}

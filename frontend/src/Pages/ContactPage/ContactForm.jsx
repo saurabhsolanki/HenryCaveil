@@ -4,15 +4,22 @@ import axios from 'axios';
 import './CSS/ContactFrom.css'
 
 
+const today = new Date();
+const dd = String(today.getDate()).padStart(2, '0');
+const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+const yyyy = today.getFullYear();
+
 const initial = {
     name:"",
-    email: "",
     phone: "",
+    city: "",
+    date:mm + '-' + dd + '-' + yyyy
   };
 
 const ContactForm = () => {
     const [data, setData] = useState(initial);
     const navigate = useNavigate();
+
 
     function handleChange(e) {
         const { name, value } = e.target;
@@ -24,9 +31,10 @@ const ContactForm = () => {
     
       function handleSubmit(e) {
         e.preventDefault();
+        console.log(data)
         axios.post("http://localhost:8080/userData",data).then((res)=>{
             console.log(res.data.message)
-            setData({name:"", email:"", phone:""})
+            setData({name:"", city:"", phone:""})
             //   setTimeout(()=>{
             //     navigate("/login")
             // },1000)
@@ -41,7 +49,7 @@ const ContactForm = () => {
 
       <form action="">
 
-        <p >Login</p>
+        <h3>Please Fill the Form</h3>
         <br />
 
         <label htmlFor="">Name</label>
@@ -50,18 +58,22 @@ const ContactForm = () => {
         <input type="text" placeholder='Enter Your Name' name='name' onChange={handleChange} />
         </div>
 
-        <label htmlFor="">Email</label>
-        <div>
-        <i className="fa-solid fa-envelope"></i>
-        <input type="text" placeholder='Enter Your Email'  name='email' onChange={handleChange} />
-        </div>
+
         <label htmlFor="">Phone Number</label>
         <div>
         <i className="fa-solid fa-mobile"></i>
-        <input type="text" placeholder='Enter Your Mobile Number' name='phone' onChange={handleChange} />
+        <input type="text" placeholder='Enter Mobile Number' name='phone' onChange={handleChange} />
         </div>
+
+
+        <label htmlFor="">City</label>
+        <div>
+        <i className="fa-solid fa-envelope"></i>
+        <input type="text" placeholder='Enter Your City'  name='city' onChange={handleChange} />
+        </div>
+
         <br />
-        <button onClick={(e)=>handleSubmit(e)}>Submit</button>
+        <button onClick={(e)=>handleSubmit(e)}>Submit Now</button>
       </form>
     </div>
   )

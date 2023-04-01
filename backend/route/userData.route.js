@@ -16,9 +16,28 @@ const transport = nodemailer.createTransport({
 
 //for getting all users
 app.get("/", async (req, res) => {
+  const search=req.query.search||""
+  const cat=req.query.category || ""
+  // console.log(cat)
+  let data=""
+  const query={
+    name:{
+      $regex:search,
+      $options:"i"
+    }
+  }
+
+
+  if(cat!="all"){
+    query.category=cat
+  }
+  const{page=1,limit=12,orderBy="id",order="asc"}=req.query || ""
 
     try {
-      let allUsers = await User.find();
+      let allUsers = await User.find(query)
+      .sort({[orderBy]:order==="asc"?1:-1})
+      .skip((page-1)*limit)
+      .limit(limit)
        return res.send({ message: "signups", data: allUsers });
     } catch (e) {
       console.log(e);
@@ -30,17 +49,17 @@ app.get("/", async (req, res) => {
 // for posting a user
 app.post('/', async (req, res) => {
     try {
-        const { name,email,phone} = req.body;
-        const getuser = await User.findOne({ email });
+        const { name,city,phone,date} = req.body;
+        const getuser = await User.findOne({ phone });
         if (getuser) {
             return res.status(400).json({ message: 'User already exists' });
         }
-        const user = await User.create({ name,email, phone});
+        const user = await User.create({ name,city, phone,date});
         console.log('user: ', user);
 
-        return res.status(201).send({ message : 'User Registered Successfully' });
+        return res.status(201).send({ message : 'User Registered Successfully...' });
         } catch (error) {
-        return res.status(404).send({ error: 'Something went wrong' });
+        return res.status(404).send({ error: 'Something went wrong...' });
     }
 });
 

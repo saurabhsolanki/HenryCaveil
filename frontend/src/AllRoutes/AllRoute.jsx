@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import AllUserList from '../Pages/AllUserPage/AllUserData'
 import ContactPage from '../Pages/ContactPage/ContactPage'
 import HomePage from '../Pages/HomePage/HomePage'
+import BlogPage from '../Pages/BlogPage/BlogPage'
+import AboutPage from '../Pages/AboutPage/AboutPage'
 
 const AllRoute = () => {
   return (
@@ -11,6 +13,9 @@ const AllRoute = () => {
         <Route path='/' element={<HomePage/>}/>
         <Route path='adminPage' element={<AllUserList/>}/>
         <Route path='contactPage' element={<ContactPage/>}/>
+        <Route path='blogPage' element={<BlogPage/>}/>
+        <Route path='aboutPage' element={<AboutPage/>}/>
+        
       </Routes>
     </div>
   )

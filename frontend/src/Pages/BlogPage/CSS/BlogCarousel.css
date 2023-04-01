@@ -1,0 +1,36 @@
+#blogCarouselDiv{
+    background-image: url("https://keenitsolutions.com/products/wordpress/eshkool-elementor/wp-content/uploads/2018/09/footer.png");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f0edfe;
+    text-align: center;
+    color: white;
+    padding: 40px 10px 20px 10px;
+}
+
+#blogCarouselDiv>h3{
+    font-weight: bolder;
+}
+
+.blogCarouseldiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #92278f;
+    border-radius: 25px;
+    padding: 20px 20px;
+    color: white;
+}
+.blogCarouseldiv img{
+width: 100px;
+border-radius: 65px;
+border: 4px solid white;
+}
