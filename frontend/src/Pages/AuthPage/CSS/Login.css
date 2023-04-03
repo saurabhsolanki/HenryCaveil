@@ -1,0 +1,95 @@
+#loginPageContentDiv {
+   box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 60%;
+  height: 550px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+#loginImageDiv{
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+    background-image: url('../../../../public/Images/loginPageWallPaper.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#loginImageDiv>h3{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        font-size: 28px;
+}
+
+
+#LoginFormDiv{
+    display: flex;
+    align-items: center;
+}
+
+#LoginFormDiv>form>p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#LoginFormDiv > form{
+  width: 100%;
+  color: black;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+#LoginFormDiv > form input[type=submit]{
+    background-color: rgb(233, 233, 233);
+    width: 50%;
+    /* margin: auto; */
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 18px;
+}
+#LoginFormDiv > form input[type=submit]:hover{
+    background-color: #312293;
+    color: white;
+    transition: 0.5s;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    #loginPageContentDiv{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 60%;
+    }
+
+    #loginImageDiv{
+        width: 100%;
+        border-radius: 10px 10px 0 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #loginPageContentDiv{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+    }
+    #LoginFormDiv > form input[type=submit]{
+        font-size: 12px;
+        margin: auto;
+    }
+}

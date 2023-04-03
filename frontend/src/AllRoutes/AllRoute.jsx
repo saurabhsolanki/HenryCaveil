@@ -5,6 +5,7 @@ import ContactPage from '../Pages/ContactPage/ContactPage'
 import HomePage from '../Pages/HomePage/HomePage'
 import BlogPage from '../Pages/BlogPage/BlogPage'
 import AboutPage from '../Pages/AboutPage/AboutPage'
+import LoginPage from '../Pages/AuthPage/LoginPage'
 
 const AllRoute = () => {
   return (
@@ -15,6 +16,7 @@ const AllRoute = () => {
         <Route path='contactPage' element={<ContactPage/>}/>
         <Route path='blogPage' element={<BlogPage/>}/>
         <Route path='aboutPage' element={<AboutPage/>}/>
+        <Route path='loginPage' element={<LoginPage/>}/>
         
       </Routes>
     </div>

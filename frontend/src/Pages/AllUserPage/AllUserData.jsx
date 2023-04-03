@@ -7,6 +7,7 @@ import LimitAndPagination from "./LimitAndPagination";
 import Pagination from "../../Components/Pagination";
 import axios from "axios";
 import FilteringAndSorting from "./FilteringAndSorting";
+import { toast } from 'react-toastify'
 
 const AllUserList = () => {
   // const data = useSelector((store) => store.auth.allUser);
@@ -24,7 +25,6 @@ const AllUserList = () => {
     try {
       const res = await fetch(`http://localhost:8080/userData?search=${search}&category=${cat}&page=${page}&limit=${limit}&orderBy=date&order=${sort}`)
       const data = await res.json()
-      console.log(data)
       setData(data.data)
     } catch (error) {
       console.log(error)
@@ -33,17 +33,16 @@ const AllUserList = () => {
   
 
   const handleDelete=async(id)=>{
+    if(window.confirm("Are you sure that you want to Delete that contact ?")){
+      await axios.delete(`http://localhost:8080/userData/${id}`).then((res)=>{
+          console.log("res del data",res.data)
+          toast.success("Contact Delete Successfully",{autoClose: 2000,})
+          getData()
+        }).catch((er)=>{
+          toast.error("SomeThing Went Wrong Please Refresh the Page and Try Again",{autoClose: 2000,})
+        })
+    }
 
-    await axios.delete(`http://localhost:8080/userData/${id}`).then((res)=>{
-        console.log("res del data",res.data)
-        // dispatch(getProducts())
-        alert("Item Deleted")
-    }).then((res)=>{
-     console.log(res)
-     getData()
-    }).catch((er)=>{
-      console.log(er)
-    })
   }
 
   useEffect(() => {

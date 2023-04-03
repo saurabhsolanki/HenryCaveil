@@ -4,14 +4,6 @@ const express = require('express');
 
 const app = express.Router();
 
-const transport = nodemailer.createTransport({
-  service: 'gmail',
-  port: 587,
-  auth: {
-    user: 'advsaurabhsolanki@gmail.com',
-    pass: '100.lanki@',
-  }
-});
 
 
 //for getting all users
@@ -48,18 +40,46 @@ app.get("/", async (req, res) => {
 
 // for posting a user
 app.post('/', async (req, res) => {
+  const { name,city,phone,date} = req.body;
     try {
-        const { name,city,phone,date} = req.body;
         const getuser = await User.findOne({ phone });
         if (getuser) {
-            return res.status(400).json({ message: 'User already exists' });
+            return res.status(404).json({ message: 'User already exists, and This Number is already in Use, Please try with different number ' });
         }
         const user = await User.create({ name,city, phone,date});
         console.log('user: ', user);
 
-        return res.status(201).send({ message : 'User Registered Successfully...' });
+        // sending mail
+        const transporter = nodemailer.createTransport({
+        service:"gmail",
+        auth:{
+            user:"advsaurabhsolanki@gmail.com",
+            pass:"qylxsvakmhtydrlf"
+            }
+        })
+
+          const mailOptions = {
+              from: "advsaurabhsolanki@gmail.com",
+              to: 'advsaurabhsolanki@gmail.com',
+              subject: `Sending user credentials`,
+              html:`Hiii ${name},
+                  Your all details mentioned here:
+                  1. Name: ${name}, &nbsp; 2. Phone No : ${phone} and &nbsp; 3. City: ${city}`
+          }
+
+          transporter.sendMail(mailOptions, (error, info)=>{
+              if(error){
+                  console.log(error)
+              }
+              else{
+                  res.status(200).json("mail sent successfully")
+                  console.log("Email Sent" + info.response)
+              }
+          })
+
+        return res.status(201).send({ message : 'Your Details Have been saved we will connect you soon, Thank You...' });
         } catch (error) {
-        return res.status(404).send({ error: 'Something went wrong...' });
+        return res.status(404).send({ message: 'Something went wrong...' });
     }
 });
 
