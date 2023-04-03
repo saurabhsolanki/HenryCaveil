@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import { toast } from 'react-toastify'
 import './CSS/ContactFrom.css'
 
 
@@ -35,11 +36,14 @@ const ContactForm = () => {
         axios.post("http://localhost:8080/userData",data).then((res)=>{
             console.log(res.data.message)
             setData({name:"", city:"", phone:""})
-            //   setTimeout(()=>{
-            //     navigate("/login")
-            // },1000)
+            toast.success(`${res.data.message}`)
+            alert(`${res.data.message}`)
+              setTimeout(()=>{
+                navigate("/")
+            },2000)
                 }).catch((err)=>{
-                    console.log(err.response.data)
+                    console.log(err.response.data.error)
+                    alert(`${err.response.data.message}`)
                 })
       }
 
