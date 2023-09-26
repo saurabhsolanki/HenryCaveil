@@ -14,7 +14,7 @@ const initial = {
     name:"",
     phone: "",
     city: "",
-    date:mm + '-' + dd + '-' + yyyy
+    date:dd + '-' + mm + '-' + yyyy
   };
 
 const ContactForm = () => {
@@ -32,7 +32,12 @@ const ContactForm = () => {
     
       function handleSubmit(e) {
         e.preventDefault();
-        console.log(data)
+        if(data.name==="" || data.city==="" ){
+          return alert("Please Fill all The field")
+        }
+        if(data.phone.length!==10 ){
+          return alert("Your Phone Number Should be alteast of 10 Digit")
+        }
         axios.post("http://localhost:8080/userData",data).then((res)=>{
             console.log(res.data.message)
             setData({name:"", city:"", phone:""})
@@ -59,21 +64,21 @@ const ContactForm = () => {
         <label htmlFor="">Name</label>
         <div>
         <i className="fa-solid fa-user"></i>
-        <input type="text" placeholder='Enter Your Name' name='name' onChange={handleChange} />
+        <input type="text" placeholder='Enter Your Name' name='name' onChange={handleChange} required/>
         </div>
 
 
         <label htmlFor="">Phone Number</label>
         <div>
         <i className="fa-solid fa-mobile"></i>
-        <input type="text" placeholder='Enter Mobile Number' name='phone' onChange={handleChange} />
+        <input type="number" placeholder='Enter Mobile Number' name='phone' onChange={handleChange} required/>
         </div>
 
 
         <label htmlFor="">City</label>
         <div>
-        <i className="fa-solid fa-envelope"></i>
-        <input type="text" placeholder='Enter Your City'  name='city' onChange={handleChange} />
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" placeholder='Enter Your City'  name='city' onChange={handleChange} required/>
         </div>
 
         <br />

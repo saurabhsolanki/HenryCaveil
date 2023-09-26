@@ -1,0 +1,86 @@
+#medicalCodingDetailsTabDiv{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.MCDhomeTabDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.MCDhomeTabDiv>p{
+    color: gray;
+    font-size: 15px;
+}
+
+.MCDhomeTabDiv>h1{
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.MCDhomeTabDiv>h5{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#MCDetailContentTextListDiv{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px 50px;
+}
+
+.textListDiv{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.textListDiv>p{
+    text-align: left;
+    font-size: small;
+    color: gray;
+}
+
+.textListDiv>i{
+    color: #7a63fa;
+    font-size: 17px;
+    margin-top: -28px;
+}
+
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 600px) {
+    #MCDetailContentTextListDiv{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 15px;
+    }
+
+    .MCDhomeTabDiv>h1{
+        font-size: 20px;
+    }
+    .MCDhomeTabDiv>p{
+        font-size: 10px;
+    }
+
+    .MCDhomeTabDiv>h5{
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .textListDiv>p{
+        text-align: left;
+        font-size: x-small;
+        color: gray;
+    }
+    
+    .textListDiv>i{
+        color: #7a63fa;
+        font-size: 12px;
+        margin-top: -28px;
+    }
+}

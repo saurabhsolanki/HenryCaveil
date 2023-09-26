@@ -13,9 +13,9 @@ const Footer = () => {
       </div>
 
       <div id="adminFooterLink">
-        <Link to='adminPage'>Admin Login</Link>
+        <Link to='adminPage'>Admin Page</Link>
         {" "}
-        <Link to='loginPage'>Login</Link>
+        {/* <Link to='loginPage'>Login</Link> */}
       </div>
     </div>
   );

@@ -7,9 +7,9 @@ import OurCourses from './OurCourses';
 
 const HomePage = () => {
     const [state]=useState({
-        title:"Learn New",
-        titleTwo:"Language For Free,",
-        titleThree:"Bulid Your Skill"
+        title:"Unleash your ",
+        titleTwo:"Medical coding career",
+        titleThree:"with our Expert Coaching "
     })
   return (
     <div>
@@ -29,8 +29,8 @@ const HomePage = () => {
                 loop:true,
                 delay:40,
                 strings:[
-                    "I'm a Medical Coder.",
-                    "I'm a Doctor",
+                    "Discover the World of Success.",
+                    "Transforming Lives and Careers",
                     "I'm a Enthusiast"
                 ]
             }}

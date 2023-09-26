@@ -43,19 +43,20 @@
     gap: 15px;
 }
 
-.textListDiv{
+#aboutPageContentTextListDiv .textListDiv{
     display: flex;
     gap: 10px;
     align-items: center;
 }
-.textListDiv>p{
+#aboutPageContentTextListDiv .textListDiv>p{
     text-align: left;
+    font-size: 14.5px;
 }
 
-.textListDiv>i{
+#aboutPageContentTextListDiv  .textListDiv>i{
     color: #7a63fa;
-    font-size: 25px;
-    margin-top: -10px;
+    font-size: 17px;
+    margin-top: -15px;
 }
 
 #aboutPageContentButton{

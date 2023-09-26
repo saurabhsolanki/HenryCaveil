@@ -52,14 +52,14 @@
 .title {
   animation-name: moveRight;
   animation-duration: 0.7s;
-  font-size: 60px;
+  font-size: 50px;
   font-weight:bold;
 }
 
 .titleTwo {
   animation-name: moveLeft;
   animation-duration: 1s;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
 }
 
@@ -68,12 +68,12 @@
   animation-duration: 1.3s;
   color: #3f309a;
   margin-bottom: 10px;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
 }
 
 .text {
-  font-size: 40px;
+  font-size: 30px;
   color: #0066a5;
   margin-bottom: 20px;
 }

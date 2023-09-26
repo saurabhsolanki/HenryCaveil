@@ -7,7 +7,7 @@ const info=[
     {
         heading:'Medical Coding Training',
         price:"70",
-        detail:"In online medical coding training students have option to study anytime.",
+        detail:"Ace Medical coding to transform procedures, prescriptions, types of equipment, medical services and healthcare diagnoses into exhaustive alphanumeric codes with our dedicated Expert faculty and guidance.",
         rating:'4.7(Rating)',
         learner:'1000 Learners',
         image:"https://rstheme.com/products/wordpress/ecenter/wp-content/uploads/2023/01/marketing-1024x619.jpg"
@@ -15,15 +15,15 @@ const info=[
     {
         heading:'Medical Transcription',
         price:"70",
-        detail:"In online medical coding training students have option to study anytime.",
+        detail:"Medical Transcription, popularly called MT is a popular health profession. Learn the art of converting the patient’s medical notes and voice recordings into comprehensive formal reports with our course.",
         rating:'4.7(Rating)',
         learner:'1000 Learners',
         image:"https://rstheme.com/products/wordpress/ecenter/wp-content/uploads/2023/01/business-1024x619.jpg"
     },
     {
-        heading:'Medical Coding',
+        heading:'Coming Soon',
         price:"70",
-        detail:"In online medical coding training students have option to study anytime.",
+        detail:"",
         rating:'4.7(Rating)',
         learner:'1000 Learners',
         image:"https://rstheme.com/products/wordpress/ecenter/wp-content/uploads/2023/01/development-1024x619.jpg"

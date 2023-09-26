@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import axios from "axios";
 import "./CSS/Login.css";
+import { useDispatch } from "react-redux";
+import { LoginApi } from "../../Redux/Auth/action";
 
 const initial = {
   email: "",
@@ -13,6 +15,7 @@ const LoginPage = () => {
   const [data, setData] = useState(initial);
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
+  const dispatch=useDispatch()
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -30,7 +33,8 @@ const LoginPage = () => {
     //     console.log(res.data, "successfull")
     //     navigate("/adminPage");
     // });
-    console.log(data)
+
+    dispatch(LoginApi(data,navigate))
   }
 
   return (

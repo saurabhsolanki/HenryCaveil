@@ -19,7 +19,7 @@ const AllUserList = () => {
   const [sort, setSort] = useState("asc");
   const [cat,setCat]=useState("all")
   const dispatch = useDispatch();
-
+  
   async function getData() {
 
     try {
@@ -27,7 +27,7 @@ const AllUserList = () => {
       const data = await res.json()
       setData(data.data)
     } catch (error) {
-      console.log(error)
+      alert('error',error)
     }
   }
   
@@ -54,6 +54,7 @@ const AllUserList = () => {
     <div id="usersListContainer">
 
         <div id="FilteringAndSorting">
+          
           <FilteringAndSorting setSearch={setSearch} setSort={setSort}/>
           <LimitAndPagination page={page} setPage={setPage} setLimit={setLimit} totalPages={totalPages}/>
         </div>

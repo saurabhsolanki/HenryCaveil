@@ -23,7 +23,7 @@ app.get("/", async (req, res) => {
   if(cat!="all"){
     query.category=cat
   }
-  const{page=1,limit=12,orderBy="id",order="asc"}=req.query || ""
+  const{page=1,limit=8,orderBy="date",order="asc"}=req.query || ""
 
     try {
       let allUsers = await User.find(query)
