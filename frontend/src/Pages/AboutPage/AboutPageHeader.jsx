@@ -7,7 +7,7 @@ const AboutPageHeader = () => {
       <div id="mainAboutPageHeaderDiv">
         <div id="aboutPageHeaderDiv">
           <div className="aboutPageHeaderDivContent">
-            <h1>About Us</h1>
+            <h1>Why Choose Us?</h1>
           </div>
 
           <div className="aboutPageHeaderDivContent">

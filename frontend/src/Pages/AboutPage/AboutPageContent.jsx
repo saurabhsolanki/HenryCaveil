@@ -1,7 +1,13 @@
 import React from "react";
 import './CSS/AboutPageContent.css'
+import { useNavigate } from "react-router-dom";
 
 const AboutPageContent = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate=()=>{
+    navigate('/medicalCoding')
+  }
   return (
     <div>
       <div id="aboutPageContentDiv">
@@ -13,33 +19,31 @@ const AboutPageContent = () => {
         </div>
 
         <div id="aboutPageContentTextDiv">
-          <h1>The World’s Largest Online Courses Ready</h1>
+          <h1>The India’s Largest Online Courses Ready</h1>
           <p>
-            Nam aliquam sem et tortor. Blandit massa enim nec dui nunc matt enim
-            faucibus us interdum posuere lorem. Ipsum dolor sit amet dolor sit
-            amet consectetur adipiscing elit ut. Sed euismod nisi porta.
+          The competition in the Healthcare sector and rising demands for CodingWallah dedicates to providing the best facilities to students in terms of education, time, study materials, and high placements. 
           </p>
 
           <div id="aboutPageContentTextListDiv">
-
+              {/* <h6>Here is how our Medical Coding and Medical Transcription Courses stand out from the rest:</h6> */}
             <div className="textListDiv">
                 <i class="fa-sharp fa-solid fa-circle-check"></i>
-                <p>Get a learning solution that’s tailored to your needs</p>
+                <p> <strong>Placement Guarantee: </strong> 100% Placement guaranteed post-completion of the program.</p>
             </div>
 
             <div className="textListDiv">
                 <i class="fa-sharp fa-solid fa-circle-check"></i>
-                <p>Get a learning solution that’s tailored to your needs</p>
+                <p> <strong>Internship Opportunities:</strong> Internship Assistance and Guidance is available for students during and after the program.</p>
             </div>
 
             <div className="textListDiv">
                 <i class="fa-sharp fa-solid fa-circle-check"></i>
-                <p>Get a learning solution that’s tailored to your needs</p>
+                <p> <strong>Unlimited Doubts Support:</strong> The faculty provides unlimited doubt sessions, personalized guidance, and assistance to match the students’ pace. </p>
             </div>
 
           </div>
 
-          <button id="aboutPageContentButton">Register Now</button>
+          <button id="aboutPageContentButton" onClick={handleNavigate}>Register Now</button>
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ const WhyReason = () => {
     ]
   return (
     <div id='whyandreason'>
-      <h2>Why Henry Harvin?</h2>
+      <h2>Why Coding Vallah ?</h2>
         <div id="reasonDiv">
         {
             data.map((e)=>(
